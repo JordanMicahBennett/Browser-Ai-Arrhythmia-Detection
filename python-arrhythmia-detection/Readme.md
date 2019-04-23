@@ -9,13 +9,11 @@ Running the defaut code generates some images from the ECG data, which can be us
 
 I directed the code to generate the aforesaid images in [outputs/](https://github.com/JordanMicahBennett/Browser-Ai-Arrythmia-Detection/tree/master/python-arrhythmia-detection/outputs).
 
-Furthermore, these images (each pertaining to a person's ECG) are used as inputs in my [Brower-Ai-Arrythmia-Detection](https://github.com/JordanMicahBennett/Browser-Ai-Arrythmia-Detection/).
- application. 
+Furthermore, these images (each pertaining to a person's ECG) are used as inputs in my [Brower-Ai-Arrythmia-Detection](https://github.com/JordanMicahBennett/Browser-Ai-Arrythmia-Detection/) application. 
  
 Purpose
 ====
-The purpose of this exercise was mainly to use damien's saved neural network model, by converting it to web-friendly format, for usage in my [Brower-Ai-Arrythmia-Detection](https://github.com/JordanMicahBennett/Browser-Ai-Arrythmia-Detection/).
- application. 
+The purpose of this exercise was mainly to use damien's saved neural network model, by converting it to web-friendly format, for usage in my [Brower-Ai-Arrythmia-Detection](https://github.com/JordanMicahBennett/Browser-Ai-Arrythmia-Detection/) application. 
  
 test if damien's neural network worked properly.
 
@@ -71,10 +69,18 @@ df.to_csv('results/predictions.csv')
 
 Requirements
 ====
+
 1. Python 3.6
-2. Numpy
-3. Biosppy
-4. Keras
+
+ i. Numpy
+ 
+ ii. Biosppy
+ 
+ iii. Keras
+ 
+ iv. Opencv_python
+ 
+ v. Cv2
 
 You may need to uninstall protobuf 3.7, if you had already installed protobuf 3.7 +. Instead, install protobuf 3.6.0 or 3.5.2.
 
