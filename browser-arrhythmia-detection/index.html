@@ -1,0 +1,87 @@
+<!-- Author: Jordan Micah Bennett -->
+<!-- Written from sratch using tensorflow js. This predicts whether a person has Arrhythmia, given input ECG images. These ECG Images were originally converted from numerical ECG values, based on the python machine learning equivalent of this html application: https://github.com/JordanMicahBennett/arrythmia-detection/blob/master/main.py -->
+
+<html>
+  <head>
+    <!-- Load TensorFlow.js -->
+    <script src="data/js/tf.min.js"> </script>
+	
+	<script src="data/js/jquery.min.js"></script>
+	
+	<link href="data/css/metro.css" />
+  </head>
+
+  <body>
+	
+	<table>
+		<tbody>
+			<tr>
+				<td style = "padding:50px;">
+				<h2> Person 0 </h2>
+				<img src="data/persons/0.png" id="image-0" width="128" style = "border:2px solid;"/> </br> </br>
+				<label id = "output-0"> Generating Machine Learning Outcome... </label>
+				</td>
+				
+				<td style = "padding:50px;">
+				<h2> Person 1 </h2> 
+				<img src="data/persons/1.png" id="image-1" width="128" style = "border:2px solid;"/> </br> </br>
+				<label id = "output-1"> Generating Machine Learning Outcome... </label>
+				</td>
+				
+				<td style = "padding:50px;">
+				<h2> Person 2 </h2>
+				<img src="data/persons/2.png" id="image-2" width="128" style = "border:2px solid;"/> </br> </br>
+				<label id = "output-2"> Generating Machine Learning Outcome... </label>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<!-- Machine learning code to predict arrhytmia problems based on converted keras model -->
+    <script>
+		const runMachineLearningArrhytmiaPredictor = async function (imageElement)
+		{
+			const model = await tf.loadLayersModel('data/keras-machine-learning-model/model.json');
+			
+			/*
+			The code below formats an input image according to tensorflow and requirements of python model from github repository below. 
+			
+			The python equivalent machine learning model required the image to be resized to 128x128, and placed in a 4d-tensor format.
+			
+			File: https://github.com/JordanMicahBennett/arrythmia-detection/blob/master/main.py
+			*/
+				const inputImage = tf.browser.fromPixels(imageElement);
+				const reducedImage = tf.image.resizeBilinear(inputImage, [128, 128]);
+				const tensorflowFormattedImage = tf.cast(reducedImage, 'float32');
+				const ecgMachineLearningFormattedTensor = tf.tensor4d(Array.from(tensorflowFormattedImage.dataSync()),[1, 128, 128, 3]);
+			
+			//return a prediction value based on formatted image input
+			return model.predict(ecgMachineLearningFormattedTensor);
+		}
+
+		//run ascynchronous function, that waits until machine learning model computes prediction, before doing things like changing label values to prediction results.
+		const begin = async function() 
+		{
+			//person 0
+			const imageElement0 = document.getElementById('image-0');
+			const prediction0 = await runMachineLearningArrhytmiaPredictor (imageElement0);
+			console.log(prediction0);
+			$("#output-0").text('Done. Machine Learning Outcome-0 : '+prediction0);
+			
+			//person 1
+			const imageElement1 = document.getElementById('image-1');
+			const prediction1 = await runMachineLearningArrhytmiaPredictor (imageElement1);
+			console.log(prediction1);
+			$("#output-1").text('Done. Machine Learning Outcome-1 : '+prediction1);	
+			
+			//person 2
+			const imageElement2 = document.getElementById('image-2');
+			const prediction2 = await runMachineLearningArrhytmiaPredictor (imageElement2);
+			console.log(prediction2);
+			$("#output-2").text('Done. Machine Learning Outcome-2 : '+prediction2);	
+		}
+		
+		begin();
+    </script>
+  </body>
+</html>
