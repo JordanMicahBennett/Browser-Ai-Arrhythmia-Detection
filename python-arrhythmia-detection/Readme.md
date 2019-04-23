@@ -19,7 +19,7 @@ Notably, [there was a saved neural network model](https://drive.google.com/open?
 
 The saved model captured the state of the Python neural network from the [default code](https://github.com/daimenspace/ECG-arrhythmia-classification-using-a-2-D-convolutional-neural-network.), after being trained for 60 hours on an Nvidia Tesla GPU, on arrhythmia data according to the author of the default code.
 
-This is good, since this means I don't have to spend 60 hours to train the model to learn how to detect arrhythmia, since I can used the saved neural network configuration.
+This is good, since this means I don't have to spend 60 hours to train the model to learn how to detect arrhythmia, since I can used the saved neural network configuration. Another big plus is that I don't need to spend [thousands of dollars to buy the expensive GPU used to train the default neural network](https://www.amazon.com/Nvidia-Tesla-GDDR5-Cores-Graphic/dp/B00Q7O7PQA).
 
 The only slight-drawback is that [I still had to write a tensorflow js neural network](https://github.com/JordanMicahBennett/Browser-Ai-Arrythmia-Detection/), that utilizes [the saved python neural network model](https://drive.google.com/open?id=1WaenBnWYyhiumkvfaqEcDzti4S9aEuhS) from the default code.
 
