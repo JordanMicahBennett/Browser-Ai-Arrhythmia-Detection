@@ -14,7 +14,7 @@ Read about some struggles below, to discover the benefits of using this reposito
     
     My modified python code: [Browser-Ai-Arrhythmia-Detection/python-arryhthmia-detection](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection/tree/master/python-arrhythmia-detection).
     
-    The browser equivalent written by myself: [Browser-Ai-Arrythmia-Detection](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection/tree/master/browser-arrhythmia-detection).
+    I will explain the steps I took to construct the browser equivalent: [Browser-Ai-Arrythmia-Detection](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection/tree/master/browser-arrhythmia-detection).
 
     The neural network above first converts sample person ECG numerical data to images, which are then used to train the neural network.
 
