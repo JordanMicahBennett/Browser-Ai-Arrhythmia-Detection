@@ -1,3 +1,9 @@
+Description
+===
+A scratch written, strictly browser convolutional neural network for arrhythmia detection, using tensorflow js, with reference to [the python equivalentw](https://github.com/JordanMicahBennett/Brower-Ai-Arrythmia-Detection/tree/master/python-arrhythmia-detection).
+
+About
+===
 1. There are several python neural network codes that can diagnose arrhythmia. I explored [this one which uses tensorflow](https://github.com/daimenspace/ECG-arrhythmia-classification-using-a-2-D-convolutional-neural-network.).
 
     For testing purposes, I setup the code, and modified it to store the predictions it produced in a folder. 
@@ -32,3 +38,12 @@ tensorflowjs_converter --input_format=keras C:/Users/Fleet2/Desktop/arrythmia-ml
    After that I loaded the converted saved model from (4).
 
    At this point, in the browser app I wrote, I can take as input ECG data image pertaining to a person, and then determine whether          arrhythmia is present using the new tensorflow neural network written, and the saved python tensorflow model from (3).
+
+
+Technology stack
+====
+1. Tensorflow js
+
+2. Jquery js
+
+Note: This is strictly browser based, and doesn't require any special setup, apart from running on an http server, like xammp. I used xampp in particular.
