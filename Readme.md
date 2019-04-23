@@ -4,7 +4,7 @@ A scratch written, strictly browser Convolutional artificial neural network appl
 
 Although [the python-arryhthmia-detection version](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection/python-arryhthmia-detection) is included [in this repository](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection), it is separate from the [browser arrythmia-detection version](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection/tree/master/browser-arrhythmia-detection), which does not require any python to work, as specified in [the technology stack section below](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection#technology-stack).
 
-Read below to discover the benefits of using this repository
+The benefits of using this repository
 ===
 1. There are several python neural network codes that can diagnose arrhythmia. I explored [this one which uses tensorflow](https://github.com/daimenspace/ECG-arrhythmia-classification-using-a-2-D-convolutional-neural-network.).
 
