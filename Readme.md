@@ -30,7 +30,7 @@ Read about some struggles below, to discover the benefits of using this reposito
 
    ii. This problem was solved, by copying the [convert_to_constants.py](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/framework/convert_to_constants.py) found on tensorflow's official [web-page framework directory](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/framework/convert_to_constants.py), into my **Python36\Lib\site-packages\tensorflow\python\framework** folder.
 
-   Using the command below, as instructred on the [tensorflow js converter](https://github.com/tensorflow/tfjs-converter converter page), I converted the saved python neural network from (1) to web friendly format.
+   Using the command below, as instructred on the [tensorflow js converter page](https://github.com/tensorflow/tfjs-converter), I converted the saved python neural network from (1) to web friendly format.
 ```python
 tensorflowjs_converter --input_format=keras C:/Users/Fleet2/Desktop/arrythmia-ml/damien/saved_keras_model/ecg_model_own.hdf5 C:/Users/Fleet2/Desktop/arrythmia-ml/damien/keras_model/
 ```
