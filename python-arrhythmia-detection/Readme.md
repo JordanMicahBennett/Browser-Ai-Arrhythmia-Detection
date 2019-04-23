@@ -23,7 +23,7 @@ This is good, since this means I don't have to spend 60 hours to train the model
 
 The only slight-drawback is that [I still had to write a tensorflow js neural network](https://github.com/JordanMicahBennett/Browser-Ai-Arrythmia-Detection/), that utilizes [the saved python neural network model](https://drive.google.com/open?id=1WaenBnWYyhiumkvfaqEcDzti4S9aEuhS) from the default code.
 
-The test of damien's default neural network worked properly, which motivated the usage of his saved configuration.
+The test of damien's default neural network worked properly, which motivated the usage of his saved configuration in my [Brower-Ai-Arrythmia-Detection](https://github.com/JordanMicahBennett/Browser-Ai-Arrythmia-Detection/) application.
 
 
 Modifications
@@ -31,7 +31,7 @@ Modifications
 This repository represents a modified version of [damien's repository](https://github.com/daimenspace/ECG-arrhythmia-classification-using-a-2-D-convolutional-neural-network.).
 The code was modified to simply store the predictions after the model was ran.
 
-[My version of main.py](https://github.com/JordanMicahBennett/Brower-Ai-Arrythmia-Detection/blob/master/python-arrhythmia-detection/main.py) includes code to.
+[My version of main.py](https://github.com/JordanMicahBennett/Brower-Ai-Arrythmia-Detection/blob/master/python-arrhythmia-detection/main.py) includes code to simply store the predictions, so I could roughly evaluate whether damien's model was working.
 
 Here is the code I wrote below:
 
