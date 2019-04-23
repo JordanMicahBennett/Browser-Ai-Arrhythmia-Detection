@@ -57,6 +57,7 @@ The 1 there signifies that the person has been detected to be normal.
 The 4 there signifies that the person probably has a problem.
 """
 import os
+import pandas as pd
 
 # Note: The 'ecgDataOutputDirectory' must match the one supplied above, after samples.csv is provided to the neural network in the prompt above.
 ecgDataOutputDirectory = 'output/';
@@ -90,6 +91,8 @@ Requirements
  iv. Opencv_python
  
  v. Cv2
+ 
+ vi. Pandas
 
 You may need to uninstall protobuf 3.7, if you had already installed protobuf 3.7 +. Instead, install protobuf 3.6.0 or 3.5.2.
 
