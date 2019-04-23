@@ -3,7 +3,7 @@ About
 ====
 This repository by Jordan Bennett concerns arrhythmia detection using machine learning, based on [damien's repository](https://github.com/daimenspace/ECG-arrhythmia-classification-using-a-2-D-convolutional-neural-network.).
 
-The cool thing about the [default application](https://github.com/daimenspace/ECG-arrhythmia-classification-using-a-2-D-convolutional-neural-network.), is that it converts numerical ECG data ([found in examples.csv](https://github.com/JordanMicahBennett/Brower-Ai-Arrythmia-Detection/blob/master/python-arrhythmia-detection/example.csv)) pertaining to a person, to an image, which is then used to train the neural network.
+The cool thing about the [default application](https://github.com/daimenspace/ECG-arrhythmia-classification-using-a-2-D-convolutional-neural-network.), is that it converts numerical ECG data ([found in examples.csv](https://github.com/JordanMicahBennett/Brower-Ai-Arrythmia-Detection/blob/master/python-arrhythmia-detection/example.csv)) pertaining to a person, to an image, which is then used to train the neural network, [based on this scientific paper](https://arxiv.org/pdf/1804.06812.pdf).
 
 Running the defaut code generates some images from the numerical ECG data ([found in examples.csv](https://github.com/JordanMicahBennett/Brower-Ai-Arrythmia-Detection/blob/master/python-arrhythmia-detection/example.csv)) which can be used as a dataset on the same code, since the default code accepts both numerical CSV data, and images.
 
