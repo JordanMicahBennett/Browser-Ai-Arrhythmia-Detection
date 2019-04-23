@@ -1,6 +1,6 @@
 Description
 ===
-A scratch written, strictly browser convolutional neural network for arrhythmia detection, using tensorflow js, with reference to [the python equivalentw](https://github.com/JordanMicahBennett/Brower-Ai-Arrythmia-Detection/tree/master/python-arrhythmia-detection).
+A scratch written, strictly browser convolutional neural network for arrhythmia detection application by Jordan Bennett, using tensorflow js, with reference to [the python equivalentw](https://github.com/JordanMicahBennett/Brower-Ai-Arrythmia-Detection/tree/master/python-arrhythmia-detection).
 
 About
 ===
