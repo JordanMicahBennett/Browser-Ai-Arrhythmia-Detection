@@ -82,9 +82,9 @@ Requirements
 
 1. Python 3.6
 
-  i. Numpy
+    i. Numpy
  
-  ii. Biosppy
+    ii. Biosppy
  
   iii. Keras
  
