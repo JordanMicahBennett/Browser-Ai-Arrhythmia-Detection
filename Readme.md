@@ -41,7 +41,7 @@ tensorflowjs_converter --input_format=keras C:/Users/Fleet2/Desktop/arrythmia-ml
 
    After that I loaded the converted saved model from (4).
 
-   At this point, in the browser app I wrote, I can take as input ECG data image pertaining to a person, and then determine whether          arrhythmia is present using the new tensorflow neural network written, and the saved python tensorflow model from (3).
+   At this point, in the browser app I wrote, I can take as input ECG data image pertaining to a person, and then determine whether          arrhythmia is present using the new tensorflow neural network written, while using the saved python tensorflow model from (4).
 
 
 Technology stack
