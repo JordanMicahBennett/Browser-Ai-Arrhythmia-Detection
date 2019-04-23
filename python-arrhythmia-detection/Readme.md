@@ -3,7 +3,7 @@ About
 ====
 This repository concerns arrhythmia detection using machine learning, based on [damien's repository](https://github.com/daimenspace/ECG-arrhythmia-classification-using-a-2-D-convolutional-neural-network.).
 
-The cool thing about the default application, is that it converts numerical ECG data pertaining to a person, to an image, which is then used to train the neural network.
+The cool thing about the [default application](https://github.com/daimenspace/ECG-arrhythmia-classification-using-a-2-D-convolutional-neural-network.), is that it converts numerical ECG data pertaining to a person, to an image, which is then used to train the neural network.
 
 Running the defaut code generates some images from the ECG data, which can be used as a dataset on the same code, since the default code accepts both numerical CSV data, and images.
 
@@ -15,7 +15,16 @@ Purpose
 ====
 The purpose of this exercise was mainly to use damien's saved neural network model, by converting it to web-friendly format, for usage in my [Brower-Ai-Arrythmia-Detection](https://github.com/JordanMicahBennett/Browser-Ai-Arrythmia-Detection/) application. 
  
-test if damien's neural network worked properly.
+Notably, [there was a saved neural network model](https://drive.google.com/open?id=1WaenBnWYyhiumkvfaqEcDzti4S9aEuhS) in the [default code](https://github.com/daimenspace/ECG-arrhythmia-classification-using-a-2-D-convolutional-neural-network.) but it is not the actual neural network from said deault code, instead it represents a configuration for the neural network.
+
+The saved model captured the state of the Python neural network from the [default code](https://github.com/daimenspace/ECG-arrhythmia-classification-using-a-2-D-convolutional-neural-network.), after being trained for 60 hours on an Nvidia Tesla GPU, on arrhythmia data according to the author of the default code.
+
+This is good, since this means I don't have to spend 60 hours to train the model to learn how to detect arrhythmia, since I can used the saved neural network configuration.
+
+The only slight-drawback is that [I still had to write a tensorflow js neural network](https://github.com/JordanMicahBennett/Browser-Ai-Arrythmia-Detection/), that utilizes [the saved python neural network model](https://drive.google.com/open?id=1WaenBnWYyhiumkvfaqEcDzti4S9aEuhS) from the default code.
+
+The test of damien's default neural network worked properly, which motivated the usage of his saved configuration.
+
 
 Modifications
 ====
