@@ -2,7 +2,7 @@ Description
 ===
 A scratch written, strictly browser Convolutional artificial neural network application for arrhythmia detection by Jordan Bennett, using tensorflow js, with reference to [the python equivalent of this machine learning model](https://github.com/JordanMicahBennett/Browser-Ai-Arrythmia-Detection/tree/master/python-arrhythmia-detection).
 
-Although [the python-arryhthmia-detection version]https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection/tree/master/python-arrhythmia-detection) is included [in this repository](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection), it is separate from the [browser arrythmia-detection version](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection/tree/master/browser-arrhythmia-detection), which does not require any python to work, as specified in [the technology stack section below](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection#technology-stack).
+Although [the python-arryhthmia-detection version](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection/tree/master/python-arrhythmia-detection) is included [in this repository](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection), it is separate from the [browser arrythmia-detection version](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection/tree/master/browser-arrhythmia-detection), which does not require any python to work, as specified in [the technology stack section below](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection#technology-stack).
 
 Read about some struggles below, to discover the benefits of using this repository
 ===
