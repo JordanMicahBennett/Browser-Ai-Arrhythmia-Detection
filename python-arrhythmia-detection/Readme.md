@@ -82,17 +82,17 @@ Requirements
 
 1. Python 3.6
 
- i. Numpy
+  i. Numpy
  
- ii. Biosppy
+  ii. Biosppy
  
- iii. Keras
+  iii. Keras
  
- iv. Opencv_python
+  iv. Opencv_python
  
- v. Cv2
+  v. Cv2
  
- vi. Pandas
+  vi. Pandas
 
 You may need to uninstall protobuf 3.7, if you had already installed protobuf 3.7 +. Instead, install protobuf 3.6.0 or 3.5.2.
 
