@@ -2,7 +2,9 @@
 
     For testing purposes, I setup the code, and modified it to store the predictions it produced in a folder. 
     
-    My modified code: [Browser-Ai-Arrythmia-Detection/python-arryhthmia-detection](aaaa)
+    My modified python code: [Browser-Ai-Arrythmia-Detection/python-arryhthmia-detection](aaaa).
+    
+    The browser equivalent written by myself: [Browser-Ai-Arrythmia-Detection](aaaa).
 
     The neural network above first converts sample person ECG numerical data to images, which are then used to train the neural network.
 
