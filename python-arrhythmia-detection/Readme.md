@@ -60,7 +60,7 @@ import os
 import pandas as pd
 
 # Note: The 'ecgDataOutputDirectory' must match the one supplied above, after samples.csv is provided to the neural network in the prompt above.
-ecgDataOutputDirectory = 'output/';
+ecgDataOutputDirectory = 'outputs/';
 
 predictionCount = 0
 
