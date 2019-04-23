@@ -1,6 +1,8 @@
 Description
 ===
-A scratch written, strictly browser convolutional neural network application for arrhythmia detection by Jordan Bennett, using tensorflow js, with reference to [the python equivalent of this machine learning model](https://github.com/JordanMicahBennett/Brower-Ai-Arrythmia-Detection/tree/master/python-arrhythmia-detection).
+A scratch written, strictly browser Convolutional artificial neural network application for arrhythmia detection by Jordan Bennett, using tensorflow js, with reference to [the python equivalent of this machine learning model](https://github.com/JordanMicahBennett/Brower-Ai-Arrythmia-Detection/tree/master/python-arrhythmia-detection).
+
+Although [the python-arryhthmia-detection version](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection/python-arryhthmia-detection) is included in this repository, it is separate from the [browser arrythmia-detection version](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection), which does not require any python to work, as specified in [the technology stack section below](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection#technology-stack).
 
 About
 ===
@@ -8,9 +10,9 @@ About
 
     For testing purposes, I setup the code, and modified it to store the predictions it produced in a folder. 
     
-    My modified python code: [Browser-Ai-Arrythmia-Detection/python-arryhthmia-detection](aaaa).
+    My modified python code: [Browser-Ai-Arrhythmia-Detection/python-arryhthmia-detection](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection/python-arryhthmia-detection).
     
-    The browser equivalent written by myself: [Browser-Ai-Arrythmia-Detection](aaaa).
+    The browser equivalent written by myself: [Browser-Ai-Arrythmia-Detection](https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection).
 
     The neural network above first converts sample person ECG numerical data to images, which are then used to train the neural network.
 
