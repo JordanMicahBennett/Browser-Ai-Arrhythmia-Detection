@@ -107,6 +107,7 @@ The 1 there signifies that the person has been detected to be normal.
 The 4 there signifies that the person probably has a problem.
 """
 import os
+import pandas as pd
 
 # Note: The 'ecgDataOutputDirectory' must match the one supplied above, after samples.csv is provided to the neural network in the prompt above.
 ecgDataOutputDirectory = 'outputs/';
