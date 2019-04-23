@@ -31,7 +31,7 @@ Modifications
 This repository represents a modified version of [damien's repository](https://github.com/daimenspace/ECG-arrhythmia-classification-using-a-2-D-convolutional-neural-network.).
 The code was modified to simply store the predictions after the model was ran.
 
-[My version of main.py](https://github.com/JordanMicahBennett/Brower-Ai-Arrythmia-Detection/blob/master/python-arrhythmia-detection/main.py) includes code to simply store the predictions [which I stored in results/predictions.csv][https://github.com/JordanMicahBennett/Brower-Ai-Arrythmia-Detection/tree/master/python-arrhythmia-detection/results), so I could roughly evaluate whether damien's model was working.
+[My version of main.py](https://github.com/JordanMicahBennett/Brower-Ai-Arrythmia-Detection/blob/master/python-arrhythmia-detection/main.py) includes code to simply store the predictions [which I stored in results/predictions.csv](https://github.com/JordanMicahBennett/Brower-Ai-Arrythmia-Detection/tree/master/python-arrhythmia-detection/results), so I could roughly evaluate whether damien's model was working.
 
 Here is the code I wrote below:
 
