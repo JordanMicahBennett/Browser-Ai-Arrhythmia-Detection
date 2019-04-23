@@ -15,7 +15,7 @@ Purpose
 ====
 The purpose of this exercise was mainly to use damien's saved neural network model, by converting it to web-friendly format, for usage in my [Brower-Ai-Arrythmia-Detection](https://github.com/JordanMicahBennett/Browser-Ai-Arrythmia-Detection/) application. 
  
-Notably, [there was a saved neural network model](https://drive.google.com/open?id=1WaenBnWYyhiumkvfaqEcDzti4S9aEuhS) in the [default code](https://github.com/daimenspace/ECG-arrhythmia-classification-using-a-2-D-convolutional-neural-network.) but it is not the actual neural network from said deault code, instead it represents a configuration for the neural network.
+Notably, [there was a saved neural network model](https://drive.google.com/open?id=1WaenBnWYyhiumkvfaqEcDzti4S9aEuhS) in the [default code](https://github.com/daimenspace/ECG-arrhythmia-classification-using-a-2-D-convolutional-neural-network.) but it is not the actual neural network from said deault code, instead it represents a configuration for the neural network. (For a visualization of the difference between the **configuration** and the **actual neural network**, try to picture **a model aka the neural network**, versus the **model's setup or features like number of neurons etc, aka the configuration**).
 
 The saved model captured the state of the Python neural network from the [default code](https://github.com/daimenspace/ECG-arrhythmia-classification-using-a-2-D-convolutional-neural-network.), after being trained for 60 hours on an Nvidia Tesla GPU, on arrhythmia data according to the author of the default code.
 
