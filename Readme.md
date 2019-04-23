@@ -26,9 +26,9 @@ Read about some struggles below, to discover the benefits of using this reposito
 
 4. After a little bit of hacking, I managed to get [tensorflow js converter](https://github.com/tensorflow/tfjs-converter) working. (The      regular setup instructions were not sufficient to get the converter working)
 
-    i. I figured out that the problem here, was that **_convert_to_constants.py_** was missing from my python tensorflow framework directory.
+    i. Based on the error reported while trying to invoke the converter, I figured out that the problem was that a file called  **_convert_to_constants.py_** was missing from my python tensorflow framework directory.
 
-   ii. This problem was solved, by copying the [convert_to_constants.py](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/framework/convert_to_constants.py) found on the official [web-page's framework directory](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/framework/convert_to_constants.py), into my **Python36\Lib\site-packages\tensorflow\python\framework** folder.
+   ii. This problem was solved, by copying the [convert_to_constants.py](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/framework/convert_to_constants.py) found on tensorflow's official [web-page framework directory](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/framework/convert_to_constants.py), into my **Python36\Lib\site-packages\tensorflow\python\framework** folder.
 
    Using the command below, as instructred on the [tensorflow js converter](https://github.com/tensorflow/tfjs-converter converter page), I converted the saved python neural network from (1) to web friendly format.
 ```python
