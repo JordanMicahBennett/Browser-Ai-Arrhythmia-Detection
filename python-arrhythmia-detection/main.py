@@ -90,7 +90,7 @@ except IndexError:
 The block below written by Jordan to save predictions.
 
 The resulting predictions.csv file has two columns:
-A.] 'Person ECG Data': This column is the ECG image of each person's ECG data. Each entry corresponds to each value in example.csv, which contains an ECG nunber per person.
+A.] 'Person ECG Data': This column is the ECG image of each person's ECG data. Each entry corresponds to a set of values in example.csv, where there are sets of ECG numbers per person.
 B.] 'Prediction': This column is the prediction of each person's ECG data. Each prediction is a class, from the ones specified on the original github repository.
 
 The possible classes are: 
