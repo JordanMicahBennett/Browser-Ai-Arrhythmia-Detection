@@ -70,7 +70,7 @@
 			
 			const prediction = model.predict(reshapedInputImage);
 			
-			const detectedClassData = prediction.argMax(-1); //this returns the index of the highest value. The highest value signifies the prediction which the model is most 'confident' with. Each index also represents or class of arrhythmia, from 0 to 6. 
+			const detectedClassData = prediction.argMax(-1); //this returns the index of the highest value. The highest value signifies the prediction which the model is most 'confident' with. Each index also represents a class of arrhythmia, from 0 to 6. 
 			
 			return detectedClassData.dataSync()[0]; //An array of 1 item is returned here always, simply extract the one item as the detected class.
 		}
