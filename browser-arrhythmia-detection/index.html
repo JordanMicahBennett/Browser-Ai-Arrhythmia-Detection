@@ -1,5 +1,5 @@
 <!-- Author: Jordan Micah Bennett -->
-<!-- Written from sratch using tensorflow js. This predicts whether a person has Arrhythmia, given input ECG images. These ECG Images were originally converted from numerical ECG values, based on the python machine learning equivalent of this html application: https://github.com/JordanMicahBennett/arrythmia-detection/blob/master/main.py -->
+<!-- Written from sratch using tensorflow js. This predicts whether a person has Arrhythmia, given input ECG images. These ECG Images were originally converted from numerical ECG values, based on the python machine learning equivalent of this html application: https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection/blob/master/python-arrhythmia-detection/main.py -->
 
 <html>
   <head>
@@ -24,13 +24,13 @@
 				
 				<td style = "padding:50px;">
 				<h2> Person 1 </h2> 
-				<img src="data/persons/1.png" id="image-1" width="128" style = "border:2px solid;"/> </br> </br>
+				<img src="data/persons/0.png" id="image-1" width="128" style = "border:2px solid;"/> </br> </br>
 				<label id = "output-1"> Generating Machine Learning Outcome... </label>
 				</td>
 				
 				<td style = "padding:50px;">
 				<h2> Person 2 </h2>
-				<img src="data/persons/2.png" id="image-2" width="128" style = "border:2px solid;"/> </br> </br>
+				<img src="data/persons/1.png" id="image-2" width="128" style = "border:2px solid;"/> </br> </br>
 				<label id = "output-2"> Generating Machine Learning Outcome... </label>
 				</td>
 			</tr>
@@ -39,7 +39,10 @@
 	
 	<!-- Machine learning code to predict arrhytmia problems based on converted keras model -->
     <script>
-		const runMachineLearningArrhytmiaPredictor = async function (imageElement)
+	
+
+			
+		const runMachineLearningArrhythmiaPredictor = async function (imageElement)
 		{
 			const model = await tf.loadLayersModel('data/keras-machine-learning-model/model.json');
 			
@@ -51,32 +54,46 @@
 			File: https://github.com/JordanMicahBennett/Browser-Ai-Arrhythmia-Detection/blob/master/python-arrhythmia-detection/main.py
 			*/
 				const inputImage = tf.browser.fromPixels(imageElement);
-				const reducedImage = tf.image.resizeBilinear(inputImage, [128, 128]);
-				const tensorflowFormattedImage = tf.cast(reducedImage, 'float32');
-				const ecgMachineLearningFormattedTensor = tf.tensor4d(Array.from(tensorflowFormattedImage.dataSync()),[1, 128, 128, 3]);
+				/*
+					Long alternate way of reshaping input image to 4d tensor required by trained model as input. (tf.reshape replaces the three code lines below.)
+					
+						const reducedImage = tf.image.resizeBilinear(inputImage, [128, 128]);
+						
+						const tensorflowFormattedImage = tf.cast(reducedImage, 'float32');
+						
+						const ecgMachineLearningFormattedTensor = tf.tensor4d(Array.from(tensorflowFormattedImage.dataSync()),[1, 128, 128, 3]);
+				*/
+				
+			//return a prediction value based on reshaped input image 
+			//trained model expects rgb=3, and WxH = 128x128 input image, of rank or first-param=1.
+			const reshapedInputImage = tf.reshape(inputImage, [1, 128, 128, 3]);
 			
-			//return a prediction value based on formatted image input
-			return model.predict(ecgMachineLearningFormattedTensor);
+			const prediction = model.predict(reshapedInputImage);
+			
+			const detectedClassData = prediction.argMax(-1); //this returns the index of the highest value. The highest value signifies the prediction which the model is most 'confident' with. Each index also represents or class of arrhythmia, from 0 to 6. 
+			
+			return detectedClassData.dataSync()[0]; //An array of 1 item is returned here always, simply extract the one item as the detected class.
 		}
 
 		//run ascynchronous function, that waits until machine learning model computes prediction, before doing things like changing label values to prediction results.
 		const begin = async function() 
 		{
+			
 			//person 0
 			const imageElement0 = document.getElementById('image-0');
-			const prediction0 = await runMachineLearningArrhytmiaPredictor (imageElement0);
+			const prediction0 = await runMachineLearningArrhythmiaPredictor (imageElement0);
 			console.log(prediction0);
 			$("#output-0").text('Done. Machine Learning Outcome-0 : '+prediction0);
 			
 			//person 1
 			const imageElement1 = document.getElementById('image-1');
-			const prediction1 = await runMachineLearningArrhytmiaPredictor (imageElement1);
+			const prediction1 = await runMachineLearningArrhythmiaPredictor (imageElement1);
 			console.log(prediction1);
 			$("#output-1").text('Done. Machine Learning Outcome-1 : '+prediction1);	
 			
 			//person 2
 			const imageElement2 = document.getElementById('image-2');
-			const prediction2 = await runMachineLearningArrhytmiaPredictor (imageElement2);
+			const prediction2 = await runMachineLearningArrhythmiaPredictor (imageElement2);
 			console.log(prediction2);
 			$("#output-2").text('Done. Machine Learning Outcome-2 : '+prediction2);	
 		}
